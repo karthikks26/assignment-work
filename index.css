@@ -155,6 +155,9 @@ span {
   .grid-item {
     margin: 10px 20px;
   }
+  .main {
+    font-size: 22px;
+  }
 }
 @media (max-width: 330px) {
   .main {

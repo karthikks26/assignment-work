@@ -37,6 +37,7 @@ body {
 .hover-info p {
   font-size: 28px;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 .grid-item:hover .hover-info {
   display: flex;

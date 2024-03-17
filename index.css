@@ -9,7 +9,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,7 +132,7 @@ span {
   letter-spacing: -0.03em;
   text-align: center;
   color: #1c1c1c;
-  margin-top: 100px;
+  margin-top: 40px;
   margin-bottom: 30px;
 }
 
@@ -140,25 +140,22 @@ span {
   color: #114a8d;
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1022px) {
   body {
     justify-content: initial;
   }
   .main {
-    margin-top: 30px;
+    padding-top: 10px;
   }
   .grid-container {
-    grid-template-columns: minmax(280px, 1fr);
+    grid-template-columns: minmax(280px, 2fr);
+    margin: 10px 20px;
   }
 }
 
 @media (max-width: 550px) {
-  .grid-item {
-    margin: 10px 20px;
-  }
   .main {
     font-size: 22px;
-    margin: 10px 20px;
   }
 }
 @media (max-width: 330px) {

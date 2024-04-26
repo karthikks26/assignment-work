@@ -2,6 +2,11 @@
   font-family: gotham;
   src: url(./assests/Gotham.ttf);
 }
+
+@font-face {
+  font-family: gothbold;
+  src: url(./assests/Gotham-Bold.otf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,17 +20,19 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f0f0f0;
+  overflow: hidden;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 520px 520px;
-  grid-gap: 10px;
+  grid-gap: 20px;
 }
 
 .grid-item {
-  height: 350px;
+  height: 300px;
   position: relative;
+  border-radius: 10px;
 }
 
 .hover-info {
@@ -44,16 +51,18 @@ body {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 10px;
+  font-family: gothbold;
 }
 
 .grid-item:hover .hover-info {
   width: 100%;
-  height: 100%;
-  background-color: red;
+  height: 80%;
+  background-color: rgb(211, 71, 71);
   z-index: 10;
   bottom: 0;
   left: 0;
   transition: width 0.5s, height 0.5s;
+  margin-bottom: 30px;
 }
 .grid-item:hover .hover-info .hover-info-content {
   height: 100%;
@@ -65,19 +74,21 @@ body {
 img {
   width: 100%;
   height: 95%;
-  object-fit: cover;
+  border-radius: 10px;
 }
 span {
   color: #ffc758;
+  font-family: gothbold;
 }
 .head {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 800;
   color: #ffffff;
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   text-align: center;
   width: 100%;
+  font-family: gothbold;
 }
 
 .gradient {
@@ -91,6 +102,8 @@ span {
     rgba(0, 0, 0, 0.59) 48.1%,
     #000000 99.41%
   );
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .child1::after {
   content: "";
@@ -99,7 +112,6 @@ span {
   right: 0;
   width: 100%;
   height: 83%;
-  padding-top: 20px;
   background: #114a8dcc;
 }
 
@@ -129,7 +141,6 @@ span {
 .para {
   font-size: 20px;
   font-weight: 400;
-  line-height: 26px;
   letter-spacing: -0.05em;
   text-align: center;
   color: #ffffff;
@@ -142,17 +153,20 @@ span {
   letter-spacing: -0.03em;
   text-align: center;
   color: #1c1c1c;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin: 15px 0px;
 }
 
 .main span {
   color: #114a8d;
 }
+.child1 {
+  height: 313px;
+}
 
 @media (max-width: 1022px) {
   body {
     justify-content: initial;
+    overflow: scroll;
   }
   .main {
     padding-top: 10px;

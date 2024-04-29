@@ -20,28 +20,30 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f0f0f0;
-  overflow: hidden;
 }
-
 .grid-container {
   display: grid;
   grid-template-columns: 520px 520px;
-  grid-gap: 20px;
+  grid-gap: 10px;
+  column-gap: 20px;
 }
-
 .grid-item {
   height: 300px;
   position: relative;
   border-radius: 10px;
+  overflow: hidden;
 }
-
 .hover-info {
-  position: absolute;
   color: #ffffff;
+  background-color: rgb(211, 71, 71);
   text-align: center;
-  width: 0;
-  height: 0;
-  transition: width 0.5s, height 0.5s;
+  width: 100%;
+  height: 80%;
+  transition: all 0.5s;
+  position: absolute;
+  left: -100%;
+  bottom: -100%;
+  margin-bottom: 30px;
 }
 
 .hover-info-content {
@@ -55,14 +57,9 @@ body {
 }
 
 .grid-item:hover .hover-info {
-  width: 100%;
-  height: 80%;
-  background-color: rgb(211, 71, 71);
   z-index: 10;
   bottom: 0;
   left: 0;
-  transition: width 0.5s, height 0.5s;
-  margin-bottom: 30px;
 }
 .grid-item:hover .hover-info .hover-info-content {
   height: 100%;
